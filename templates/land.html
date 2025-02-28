@@ -108,7 +108,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-              <button type="submit" name="login_patient" type="button" class="btn btn-primary">Sign In</button>
+              <button type="submit" name="login_patient" type="button" class="btn btn-primary">Login</button>
             </div>
           </form>
           </div>
@@ -124,18 +124,17 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form>
-                <label for="fname">Admin ID:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Password:</label><br>
-                <input type="text" id="lname" name="lname">
-              </form>
+              <form action="/login_admin" method="POST">
+                <label>Admin ID:</label><br>
+                <input type="text" id="admin_id" name="admin_id"><br>
+                <label>Password:</label><br>
+                <input type="text" id="admin_pass" name="admin_pass">
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" name="login_admin" class="btn btn-primary">Login</button>
             </div>
-          </div>
+          </form>
         </div>
       </div><!-- End Admin login -->
     </section><!-- /Starter Section Section -->
@@ -144,13 +143,13 @@
 
   <footer id="footer" class="footer light-background">
 
-    <div class="container footer-top">
+    <!--<div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="/patient_home" class="logo d-flex align-items-center">
             <span class="sitename">DiaRec</span>
           </a>
-          <div class="footer-contact pt-3">
+           <div class="footer-contact pt-3">
             <p>A108 Adam Street</p>
             <p>New York, NY 535022</p>
             <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
@@ -164,7 +163,7 @@
           </div>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
+       <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
@@ -209,7 +208,7 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
 
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">DiaRec</strong> <span>All Rights Reserved</span></p>
@@ -221,6 +220,8 @@
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
+  </div>
+  
 
   </footer>
 
