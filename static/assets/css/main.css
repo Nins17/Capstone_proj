@@ -64,8 +64,6 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
-  justify-content: center;
-  align-items: center;
 }
 
 a {
@@ -303,7 +301,8 @@ h6 {
 .header .cta-btn:focus {
   color: var(--contrast-color);
   background: var(--accent-color);
-  font-size: 14px;
+  
+  font-size: 16px;
   padding: 8px 25px;
   margin: 0 0 0 30px;
   border-radius: 50px;
@@ -375,13 +374,13 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    font-size: 15px;
-    padding: 0 2px;
+    font-size: 18px;
+    padding: 10px;
     font-family: var(--nav-font);
     font-weight: 400;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+  
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
@@ -391,7 +390,7 @@ h6 {
   .navmenu a:focus i {
     font-size: 12px;
     line-height: 0;
-    margin-left: 5px;
+    margin-left: 10px;
     transition: 0.3s;
   }
 
@@ -726,6 +725,14 @@ h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  overflow: hidden;
+  background: var(--background-color);
+  transition: all 0.6s ease-out;
+}
 
 #preloader:before {
   content: "";
@@ -1719,14 +1726,7 @@ section,
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
- 
-}
-.section-title{
-  width: 500px;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  /* Add your styles here */
 }
 .start-btn{
   background-color: #1977cc;
@@ -1734,14 +1734,4 @@ section,
   border-radius:5px;
   border: none;
   padding: 8px;
-}
-form input{
-  align-items: center;
-  width: 300px;
-  border-radius: 10px;
-}
-
-/*records*/
-thead{
-  background-color: #1977cc;
 }
