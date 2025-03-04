@@ -102,7 +102,13 @@ def login_admin():
         
 @app.route('/patient_home',methods=["POST","GET"])
 def patient_home():
-     return render_template("records.html",first_name=session["account"][2])
+    login_patient = session.get('login_patient')
+    if login_patient == True:
+        return render_template("records.html",first_name=session["account"][2])
+    else:
+        flash('Patient not authorize!', 'error')
+        return redirect(url_for('land'))
+    
        
             
         
@@ -110,7 +116,13 @@ def patient_home():
 
 @app.route('/admin_home')
 def admin_home():
-    return render_template("results.html",first_name=session["account"][2])
+    login_admin = session.get('login_admin')
+    if login_admin == True:
+        return render_template("results.html",first_name=session["account"][2])
+    else:
+        flash('Admin not authorize!', 'error')
+        return redirect(url_for('land'))
+        
 
 
 @app.route('/sign_out')

@@ -226,6 +226,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   background-color: var(--background-color);
+ 
 }
 
 .header .topbar {
@@ -850,7 +851,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 20px 0;
   scroll-margin-top: 72px;
   overflow: clip;
 }
@@ -862,7 +863,12 @@ section,
     scroll-margin-top: 60px;
   }
 }
-
+@media (max-width: 768px) {
+  img {
+      right: -50px; /* Adjust for smaller screens */
+      max-width: 150px; /* Reduce image size */
+  }
+}
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
